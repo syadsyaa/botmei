@@ -25,7 +25,7 @@ Anda dapat menambah atau mengurangi energi pengguna lain dengan beberapa metode 
    - \`.addenergy @username|[jumlah energi]\`
    - \`.reduceenergy @username|[jumlah energi]\`
    
-   _Contoh_: \`.addenergy @Hfzz|10\`
+   _Contoh_: \`.addenergy @rifza|10\`
 
 🔸 *Cara #3 - Dengan Nomor Target*  
    ➡️ Sertakan nomor lengkap pengguna diikuti \`|\` dan jumlah energi.

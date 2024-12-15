@@ -368,10 +368,10 @@ export default async function on({ Exp, ev, store, cht, ai, is }) {
             contextInfo: { 
                 externalAdReply: {
                     title: cht.pushName,
-                    body: "Bot most powerfull by Artificial Intelligence, The beginning of the robot era.",
-                    thumbnailUrl: "https://files.catbox.moe/96rqnu.jpg",
+                    body: "Artificial Intelligence, The beginning of the robot era",
+                    thumbnailUrl: "https://telegra.ph/file/e072d1b7d5fe75221a36c.jpg",
                     sourceUrl: "https://github.com/Hzkun001",
-                    // mediaUrl: `http://ẉa.me/6283110928302/9992828`,
+                    mediaUrl: `http://ẉa.me/6289681861461/9992828`,
                     renderLargerThumbnail: true,
                     showAdAttribution: true,
                     mediaType: 1,

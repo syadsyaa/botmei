@@ -162,7 +162,7 @@ export default async function on({ cht, Exp, store, ev, is }) {
             contextInfo: {
                 externalAdReply: {
                     thumbnailUrl: 'https://telegra.ph/file/5d6315a9b27bbc3d89c54.jpg',
-                    mediaUrl: "http://ẉa.me/6283110928302/"+Math.floor(Math.random() * 100000000000000000),
+                    mediaUrl: "http://ẉa.me/6289681861461/"+Math.floor(Math.random() * 100000000000000000),
                     renderLargerThumbnail: true,
                     showAdAttribution: true,
                     mediaType: 1,

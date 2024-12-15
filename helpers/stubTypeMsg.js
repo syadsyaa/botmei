@@ -71,7 +71,7 @@ ${group.desc}`:"")
              "ItemCount": 0,
              "message": `Hai ${members}`,
              "totalCurrencyCode": `Selamat datang di group ${group.subject}`,
-             "sellerJid": "6289681861461@s.whatsapp.net",
+             "sellerJid": "6281374955605@s.whatsapp.net",
              "token": "AR6oiV5cQjZsGfjvfDwl0DXfnAE+OPRkWAQtFDaB9wxPlQ==",
              "thumbnail": (await Buffer.from(await fetch(pp).then(a => a.arrayBuffer())).toString("base64")),
            }
@@ -85,11 +85,11 @@ ${group.desc}`:"")
               "productId": "8080277038663215",
               "title": `Hai ${members}`,
               "description": `Hai ${members}`,
-              "currencyCode": "TEMAN",
+              "currencyCode": "TERMAI",
               "priceAmount1000": `Selamat datang di group ${group.subject}`,
               "productImageCount": 8
             },
-            "businessOwnerJid": "6289681861461@s.whatsapp.net",
+            "businessOwnerJid": "6281374955605@s.whatsapp.net",
               "contextInfo": {
                 "expiration": 86400,
                 "ephemeralSettingTimestamp": "1723572108",
@@ -206,7 +206,7 @@ Selamat tinggal ${members}`
               "productId": "8080277038663215",
               "title": `Hai ${members}`,
               "description": `Byee ${members}`,
-              "currencyCode": "TERMAI",
+              "currencyCode": "ReimuAI",
               "priceAmount1000": `Selamat tinggal dari group ${group.subject}`,
               "productImageCount": 8
             },
@@ -240,7 +240,7 @@ Selamat tinggal ${members}`
                 forwardingScore: 19,
                 isForwarded: true,
                 forwardedNewsletterMessageInfo: {
-                    newsletterJid: "",
+                    newsletterJid: "1@newsletter",
                     serverMessageId: 152
                 }
             }

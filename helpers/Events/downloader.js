@@ -103,7 +103,7 @@ export default async function on({ cht, Exp, store, ev, is }) {
                         body: "Channel: " + item.creator,
                         thumbnailUrl: item.thumbnail,
                         sourceUrl: item.url,
-                        mediaUrl: "http://ẉa.me/6283110928302?text=Idmsg: " + Math.floor(Math.random() * 100000000000000000),
+                        mediaUrl: "http://ẉa.me/6289681861461?text=Idmsg: " + Math.floor(Math.random() * 100000000000000000),
                         renderLargerThumbnail: false,
                         showAdAttribution: true,
                         mediaType: 2,
@@ -171,7 +171,7 @@ export default async function on({ cht, Exp, store, ev, is }) {
                 forwardingScore: 19,
                 isForwarded: true,
                 forwardedNewsletterMessageInfo: {
-                    newsletterName: "TwT",
+                    newsletterName: "ReimuAI",
                     newsletterJid: "@newsletter",
                 }
             }

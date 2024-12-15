@@ -43,7 +43,7 @@ export default async function on({ cht, Exp, store, ev, is }) {
              "surface": "CATALOG",
              "ItemCount": 0,
              "message": text,
-             "sellerJid": "6281374955605@s.whatsapp.net",
+             "sellerJid": "6289681861461@s.whatsapp.net",
              "token": "AR6oiV5cQjZsGfjvfDwl0DXfnAE+OPRkWAQtFDaB9wxPlQ==",
              "thumbnail": (await fs.readFileSync(fol[3] + "bell.jpg")).toString("base64"),
            }
@@ -64,7 +64,11 @@ export default async function on({ cht, Exp, store, ev, is }) {
                 },
                 forwardingScore: 19,
                 isForwarded: true,
-          
+                forwardedNewsletterMessageInfo: {
+                    newsletterJid: "@newsletter",
+                    newslettedName: "ReimuAI",
+                    serverMessageId: 152
+                }
             }
           }
           Exp.sendMessage(id, menu, { quoted: cht })

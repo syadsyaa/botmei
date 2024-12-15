@@ -135,7 +135,7 @@ export default async function on({ cht, Exp, store, ev, is }) {
            type: ["audio"]
         }
     }, async({ media }) => {
-         await cht.edit("Bntar tak dengerin dulu...", keys[sender])
+         await cht.edit("Bentar tak dengerin dulu...", keys[sender])
          musixSearch(media)
          .then(a => cht.reply(a))
 	})

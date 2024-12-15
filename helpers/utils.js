@@ -29,6 +29,9 @@ async function utils({ Exp, cht, is, store }) {
         cht.delete = async () => Exp.sendMessage(cht.id, { delete: cht.key }).then(a => undefined)
         
         const type = getContentType(cht?.message)
+
+        if(/^(protocolMessage)/.test(type)) return
+        
         const msgType = type === "extendedTextMessage" ? getContentType(cht?.message?.extendedTextMessage) : type
         cht.type = Exp.func['getType'](msgType) || type
 
@@ -112,7 +115,7 @@ async function utils({ Exp, cht, is, store }) {
         is.owner =  global.owner.some(a => { const jid = a?.split("@")[0]?.replace(/[^0-9]/g, ''); return jid && (jid + from.sender === cht.sender) }) || is.me
 		const groupDb = is.group ? Data.preferences[cht.id] : {}
 
-        is.baileys = ["3EB","BAE5","BELL409","B1E"].some(a => cht?.key?.id.startsWith(a))
+        is.baileys = /^(3EB|BAE5|BELL409|B1E)/.test(cht.key.id)
         is.botMention = cht?.mention?.includes(Exp.number)
         is.cmd = cht.cmd
         is.sticker = cht.type === "sticker"
@@ -120,7 +123,7 @@ async function utils({ Exp, cht, is, store }) {
         is.image = cht.type === "image"
         is.video = cht.type === "video"
         is.document = cht.type === "document"
-        is.url = cht?.msg?.match(/(https?:\/\/)?[^\s]+\.(com|watch|net|org|xyz|id|co|io|ru|uk|kg|gov|edu|dev|tech|codes|ai|shop|me|info|online|store|biz|pro|aka)(\/[^\s]*)?/gi)?.map(a => !a?.startsWith('http') ?  'https://'+a:a) || []
+        is.url = cht?.msg?.match(/(https?:\/\/)?[^\s]+\.(com|watch|net|org|it|xyz|id|co|io|ru|uk|kg|gov|edu|dev|tech|codes|ai|shop|me|info|online|store|biz|pro|aka)(\/[^\s]*)?/gi)?.map(a => !a?.startsWith('http') ?  'https://'+a:a) || []
         is.mute = groupDb?.mute && !is.owner && !is.me
         is.antiTagall = groupDb?.antitagall && (cht.mention?.length >= 5) && !is.owner
 
@@ -140,7 +143,7 @@ async function utils({ Exp, cht, is, store }) {
         is.quoted = cht.quoted
         is.reaction = cht.reaction
         
-        cht.reply = async function (text, etc={},quoted={ quoted: true }) {
+        if(!cht.reply) cht.reply = async function (text, etc={},quoted={ quoted: true }) {
           try {
             if(quoted?.quoted){
               quoted.quoted = cht?.reaction ? {
@@ -162,7 +165,7 @@ async function utils({ Exp, cht, is, store }) {
           }
         }
         
-        cht.replyWithTag = async function (text, tag) {
+        if(!cht.replyWithTag) cht.replyWithTag = async function (text, tag) {
           try {
             const { key } = await Exp.sendMessage(cht.id, { text: Exp.func.tagReplacer(text, tag) }, { quoted: cht })
             keys[cht.sender] = key
@@ -172,7 +175,7 @@ async function utils({ Exp, cht, is, store }) {
           }
         }
 
-        cht.edit = async function (text, key, force) {
+        if(!cht.edit) cht.edit = async function (text, key, force) {
           if(!("editmsg" in cfg)) cfg.editmsg = true
           let msg = { text:text||"..." }
           if(cfg.editmsg||force) msg.edit = key
@@ -183,7 +186,7 @@ async function utils({ Exp, cht, is, store }) {
           }
         }
         
-        cht.warnGc = async({ type, warn, kick, max }) => {
+        if(!cht.warnGc) cht.warnGc = async({ type, warn, kick, max }) => {
           let t = type||"antibot"
           groupDb.warn = groupDb.warn || {}
           groupDb.warn[cht.sender] = groupDb.warn[cht.sender] || {}
@@ -201,6 +204,7 @@ async function utils({ Exp, cht, is, store }) {
           }
           Data.preferences[cht.id] = groupDb
         }
+        
 
     } catch (error) {
         console.error("Error in utils:", error)

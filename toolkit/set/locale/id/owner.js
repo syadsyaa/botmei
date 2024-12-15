@@ -22,7 +22,6 @@ infos.wrongFormat = "*❗Format salah, silahkan periksa kembali*"
 infos.successDelBadword = `Berhasil menghapus <input> kedalam list badword!`
 infos.successSetThumb = "Berhasil mengganti thumbnail menu!"
 infos.successAddBadword = `Berhasil menambahkan <input> kedalam list badword!`
-
 infos.isModeOn = `Maaf, <mode> sudah dalam mode on!`
 infos.isModeOff = `Maaf, <mode> sudah dalam mode off!`
 
@@ -56,6 +55,7 @@ infos.set = `
 - lang <Country Code>
 - voice <modelname>
 - menu <type>
+- call <off or action>
 
 _Example: .set public on_`
 
@@ -78,9 +78,9 @@ Example:
 - .delprem
 
  - *#2* => _Dengan tag target_
-- .kurangprem @hfzz|1d
-- .addprem @hfzz|1d
-- .delprem @hfzz|1d
+- .kurangprem @rifza|1d
+- .addprem @rifza|1d
+- .delprem @rifza|1d
  
  - *#2* => _Dengan nomor target_
 - .addprem +62 831-xxxx-xxxx|1d
@@ -95,24 +95,39 @@ Example:
 - w, week, weeks, minggu
 
 *Contoh lain terkait cara menggunakan dengan unit waktu yang berbeda:*
-- .addprem @Hfzz|30 detik 
+- .addprem @Hzkun|30 detik 
     ➡️ Menambahkan 30 detik.
-- .addprem @Hfzz|1 menit 
+- .addprem @Hzkun|1 menit 
     ➡️ Menambahkan 1 menit.
-- .addprem @Hfzz|1 jam 15 detik 
+- .addprem @Hzkun|1 jam 15 detik 
     ➡️ Menambahkan 1 jam 15 detik.
-- .addprem @Hfzz|2 hari 4 jam 
+- .addprem @Hzkun|2 hari 4 jam 
     ➡️ Menambahkan 2 hari 4 jam.
-- .addprem @Hfzz|1 minggu 
+- .addprem @Hzkun|1 minggu 
     ➡️ Menambahkan 1 minggu.
-- .addprem @Hfzz|1w 2d 3h 
+- .addprem @Hzkun|1w 2d 3h 
     ➡️ Menambahkan 1 minggu 2 hari 3 jam.
-- .addprem @Hfzz|1d 2h 30m 15s 
+- .addprem @Hzkun|1d 2h 30m 15s 
     ➡️ Menambahkan 1 hari 2 jam 30 menit 15 detik.
 
 \`Semoga panduan ini dibaca dengan teiti agar tidak lagi menanyakan kepada admin terkait cara penggunaanya, terimakasih\`
 `
 
+infos.setCall = `
+\`Cara Penggunaan:\`
+ ▪︎ .set call <off or action>
+- Contoh: .set call reject
+
+_Anda juga bisa menambahkan action lain dengan cara memberi tanda *+*_
+
+Contoh: .set call reject+block
+
+\`LIST ACTION\`
+- reject (menolak panggilan)
+- block (memblokir pemanggil)
+`
+infos.successSetCall = "Berhasil mengatur anti call!\nAction: <action>"
+infos.successOffCall = "Berhasil menonaktifkan anti call!"
 
 infos.setFquoted = `
 \`Contoh penggunaan:\`
@@ -186,8 +201,8 @@ Contoh:
 - .unbanned
 
  - *#2* => _Dengan tag target_
-- .banned @Hfzz|1d
-- .unbanned @Hfzz
+- .banned @rifza|1d
+- .unbanned @rifza
 
  - *#3* => _Dengan nomor target_
 - .banned +62 831-xxxx-xxxx|1d
@@ -201,19 +216,19 @@ Contoh:
 - w, week, weeks, minggu
 
 *Contoh lain terkait cara menggunakan dengan unit waktu yang berbeda:*
-- .banned @Hfzz|30 detik 
+- .banned @Hzkun|30 detik 
     ➡️ Melakukan banned selama 30 detik.
-- .banned @Hfzz|1 menit 
+- .banned @Hzkun|1 menit 
     ➡️ Melakukan banned selama 1 menit.
-- .banned @Hfzz|1 jam 15 detik 
+- .banned @Hzkun|1 jam 15 detik 
     ➡️ Melakukan banned selama 1 jam 15 detik.
-- .banned @Hfzz|2 hari 4 jam 
+- .banned @Hzkun|2 hari 4 jam 
     ➡️ Melakukan banned selama 2 hari 4 jam.
-- .banned @Hfzz|1 minggu 
+- .banned @Hzkun|1 minggu 
     ➡️ Melakukan banned selama 1 minggu.
-- .banned @Hfzz|1w 2d 3h 
+- .banned @Hzkun|1w 2d 3h 
     ➡️ Melakukan banned selama 1 minggu 2 hari 3 jam.
-- .banned @Hfzz|1d 2h 30m 15s 
+- .banned @Hzkun|1d 2h 30m 15s 
     ➡️ Melakukan banned selama 1 hari 2 jam 30 menit 15 detik.
 
 \`Pastikan membaca panduan ini dengan teliti agar tidak perlu bertanya lebih lanjut kepada admin terkait cara penggunaannya. Terima kasih.\``
