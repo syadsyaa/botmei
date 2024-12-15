@@ -5,17 +5,16 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "test": "start",
-    "start": "node index"
+    "start": "npm i -g pm2 && pm2 start index.js && pm2 save && pm2 logs"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Hzkun/reimuku"
   },
   "keywords": [
-    "whatsapp-bot-ai"
+    "project-hzkun"
   ],
-  "author": "@rifza.p.p",
+  "author": "@Hzkun",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/Hzkun001"
