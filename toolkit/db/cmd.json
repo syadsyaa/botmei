@@ -1,0 +1,71 @@
+{
+  "total": 36,
+  "ai_response": 59,
+  "cmd": [
+    {
+      "name": "menu",
+      "use": 16,
+      "times": "08/12 16:34:07"
+    },
+    {
+      "name": "profile",
+      "use": 2,
+      "times": "08/12 15:28:10"
+    },
+    {
+      "name": "charge",
+      "use": 1,
+      "times": "08/12 09:41:41"
+    },
+    {
+      "name": "freetrial",
+      "use": 1,
+      "times": "08/12 09:41:41"
+    },
+    {
+      "name": "stats",
+      "use": 1,
+      "times": "08/12 09:41:41"
+    },
+    {
+      "name": "set",
+      "use": 4,
+      "times": "08/12 15:28:10"
+    },
+    {
+      "name": "sticker",
+      "use": 1,
+      "times": "08/12 16:34:07"
+    },
+    {
+      "name": "addprem",
+      "use": 5,
+      "times": "08/12 16:34:07"
+    },
+    {
+      "name": "setthumb",
+      "use": 1,
+      "times": "08/12 16:34:07"
+    },
+    {
+      "name": "setpp",
+      "use": 1,
+      "times": "08/12 16:34:07"
+    },
+    {
+      "name": "cekapikey",
+      "use": 1,
+      "times": "08/12 16:34:07"
+    },
+    {
+      "name": "anya",
+      "use": 1,
+      "times": "08/12 16:34:07"
+    },
+    {
+      "name": "play",
+      "use": 1,
+      "times": "08/12 16:34:07"
+    }
+  ]
+}
